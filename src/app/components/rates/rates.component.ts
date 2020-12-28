@@ -39,7 +39,7 @@ export class RatesComponent implements OnInit {
       },
       err => Swal.fire({
             icon: 'error',
-            title: `Unsuported code: ${this.query.toUpperCase()}`
+            title: `Código no soportado: ${this.query.toUpperCase()}`
           })
     );
   }

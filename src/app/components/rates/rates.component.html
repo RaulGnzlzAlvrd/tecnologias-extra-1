@@ -9,7 +9,7 @@
     <form>
       <div class="form-group row">
         <label for="currency" class="col-md-1 col-form-label">Moneda:</label>
-        <input type="text" class="form-control col-md-1" [(ngModel)]="query" maxLength="3" name="query">
+        <input type="text" class="form-control col-md-2" [(ngModel)]="query" maxLength="3" name="query" placeholder="Código de 3 caracteres">
         <button class="btn btn-dark mx-3" type="submit" (click)="getRates()" [disabled]="query.length != 3">Consultar</button>
       </div>
     </form>
