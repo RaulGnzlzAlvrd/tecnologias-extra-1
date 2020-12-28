@@ -13,7 +13,7 @@ export class RatesService {
     private http: HttpClient
   ) { }
 
-  getRates(base: string) {
+  getRates(base:string) {
     return this.http.get<Rates>(api_uri + '/' + base);
   }
 
