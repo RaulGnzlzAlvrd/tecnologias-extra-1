@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Rate, Rates } from 'src/app/models/rates';
 import { RatesService } from 'src/app/services/rates.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-rates',
@@ -36,7 +37,10 @@ export class RatesComponent implements OnInit {
         this.rates.rates = ratesList;
         this.query = '';
       },
-      err => console.error(err)
+      err => Swal.fire({
+            icon: 'error',
+            title: `Unsuported code: ${this.query.toUpperCase()}`
+          })
     );
   }
 
