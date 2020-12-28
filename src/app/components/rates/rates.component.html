@@ -6,11 +6,13 @@
   </div>
 
   <div class="card-body">
-    <div class="form-group row">
-      <label for="currency" class="col-md-1 col-form-label">Moneda:</label>
-      <input type="text" class="form-control col-md-1" [(ngModel)]="query" maxLength="3">
-      <button class="btn btn-dark mx-3" (click)="getRates()" [disabled]="query.length != 3">CONSULTAR</button>
-    </div>
+    <form>
+      <div class="form-group row">
+        <label for="currency" class="col-md-1 col-form-label">Moneda:</label>
+        <input type="text" class="form-control col-md-1" [(ngModel)]="query" maxLength="3" name="query">
+        <button class="btn btn-dark mx-3" type="submit" (click)="getRates()" [disabled]="query.length != 3">Consultar</button>
+      </div>
+    </form>
     
     <table class="table">
       <thead class="thead-dark">
